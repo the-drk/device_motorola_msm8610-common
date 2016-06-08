@@ -194,7 +194,8 @@ PRODUCT_PACKAGES += \
     wlan_persist_symlink \
     wcnss_service \
     libQWiFiSoftApCfg \
-    libqsap_sdk
+    libqsap_sdk \
+    wificond
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
