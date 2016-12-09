@@ -180,6 +180,10 @@ PRODUCT_PACKAGES += \
     libcnefeatureconfig \
     libshims_thermal
 
+# WiFi HAL
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service
+
 # Wifi
 PRODUCT_PACKAGES += \
     hostapd_default.conf \
