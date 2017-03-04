@@ -4,7 +4,7 @@ OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 YEAR=`date +"%Y"`
 (cat << EOF) > $MAKEFILE
-# Copyright (C) $YEAR The CyanogenMod Project
+# Copyright (C) $YEAR The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -45,7 +45,7 @@ for FILE in `egrep -v '(^#|^$)' proprietary-files.txt`; do
 done
 
 (cat << EOF) > ../../../$OUTDIR/$DEVICE-vendor.mk
-# Copyright (C) $YEAR The CyanogenMod Project
+# Copyright (C) $YEAR The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -67,7 +67,7 @@ done
 EOF
 
 (cat << EOF) > ../../../$OUTDIR/BoardConfigVendor.mk
-# Copyright (C) $YEAR The CyanogenMod Project
+# Copyright (C) $YEAR The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -90,7 +90,7 @@ OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 
 (cat << EOF) > $MAKEFILE
-# Copyright (C) $YEAR The CyanogenMod Project
+# Copyright (C) $YEAR The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -130,11 +130,8 @@ for FILE in `egrep -v '(^#|^$)' ../msm8610-common/proprietary-files.txt`; do
   fi
 done
 
-echo
-echo "\$(call inherit-product, vendor/qcom/binaries/msm8974/graphics/graphics-vendor.mk)"
-
 (cat << EOF) > ../../../$OUTDIR/$DEVICE-vendor.mk
-# Copyright (C) $YEAR The CyanogenMod Project
+# Copyright (C) $YEAR The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -154,7 +151,7 @@ echo "\$(call inherit-product, vendor/qcom/binaries/msm8974/graphics/graphics-ve
 EOF
 
 (cat << EOF) > ../../../$OUTDIR/BoardConfigVendor.mk
-# Copyright (C) $YEAR The CyanogenMod Project
+# Copyright (C) $YEAR The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -172,7 +169,7 @@ EOF
 EOF
 
 (cat << EOF) > ../../../$OUTDIR/Android.mk
-# Copyright (C) $YEAR The CyanogenMod Project
+# Copyright (C) $YEAR The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
