@@ -159,12 +159,8 @@ static char *camera_fixup_setparams(int id, const char *settings)
     params.dump();
 #endif
 
-    const char *sceneMode = params.get(CameraParameters::KEY_SCENE_MODE);
-    if (sceneMode != NULL) {
-        if (!strcmp(sceneMode, CameraParameters::SCENE_MODE_HDR)) {
-            params.remove("zsl");
-        }
-    }
+    if (get_product_device() == OTUS)
+        params.set("zsl", "on");
 
 #if !LOG_NDEBUG
     ALOGV("%s: fixed parameters:", __FUNCTION__);
