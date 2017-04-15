@@ -98,6 +98,9 @@ TARGET_UNIFIED_DEVICE := true
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Memory
+MALLOC_SVELTE := true
+
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_RIL_VARIANT := caf
