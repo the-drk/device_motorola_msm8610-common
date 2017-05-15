@@ -100,10 +100,6 @@ PRODUCT_PACKAGES += \
     memtrack.msm8610 \
     power.msm8610
 
-# Browser
-PRODUCT_PACKAGES += \
-    Gello
-
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8610 \
