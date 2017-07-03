@@ -92,9 +92,6 @@ TARGET_NO_RPC := true
 # Hardware tunables framework
 BOARD_HARDWARE_CLASS := $(COMMON_PATH)/cmhw/
 
-# Init
-TARGET_UNIFIED_DEVICE := true
-
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
