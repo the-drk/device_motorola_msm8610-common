@@ -102,14 +102,14 @@ TARGET_NO_RPC := true
 
 # Filesystem
 TARGET_ALLOW_LEGACY_AIDS := true
-TARGET_FS_CONFIG_GEN := $(VENDOR_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Lineage hardware
 BOARD_HARDWARE_CLASS += \
-    $(VENDOR_PATH)/lineagehw
+    $(COMMON_PATH)/lineagehw
 
 # Memory
 MALLOC_SVELTE := true

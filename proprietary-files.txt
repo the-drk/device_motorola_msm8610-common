@@ -1,6 +1,5 @@
 # Taken from victara MPE24.49-18
 bin/adsprpcd
-bin/batt_health
 bin/btnvtool
 bin/hci_qcomm_init
 bin/irsc_util

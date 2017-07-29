@@ -1,5 +1,4 @@
 # Binaries
-/system/bin/batt_health                                     u:object_r:batt_health_exec:s0
 /system/bin/thermal-engine                                  u:object_r:thermal-engine_exec:s0
 
 # Camera
@@ -11,10 +10,6 @@
 
 # FSG (regional modem config) blobs
 /fsg(/.*)?                                                  u:object_r:moto_firmware:s0
-
-# Motorola services
-/data/power_supply_logger(/.*)?                             u:object_r:batt_health_data_file:s0
-/sys/module/qpnp_charger/parameters(/.*)?                   u:object_r:sysfs_batt_health:s0
 
 # MPDecision
 /data/system/default_values                                 u:object_r:mpctl_data_file:s0
