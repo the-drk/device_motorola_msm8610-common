@@ -1,6 +1,5 @@
 # Taken from victara MPE24.49-18
 bin/adsprpcd
-bin/ATFWD-daemon
 bin/batt_health
 bin/btnvtool
 bin/hci_qcomm_init
@@ -58,7 +57,6 @@ vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmmQSM.so
 vendor/lib/libmmrtpdecoder.so
 vendor/lib/libnetmgr.so
-vendor/lib/liboemcamera.so
 vendor/lib/liboemcrypto.so
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxAmrwbplusDec.so
