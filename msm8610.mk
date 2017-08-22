@@ -164,6 +164,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     librs_jni \
+    android.hardware.usb@1.0-service \
     com.android.future.usb.accessory
 
 # Power
