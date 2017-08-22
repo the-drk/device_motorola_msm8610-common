@@ -188,13 +188,16 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
     lights.msm8610
 
+# GNSS HAL
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-imp
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8610
 
-# GNSS HAL
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-imp
+# HIDL
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
 
 # Filesystem
 PRODUCT_PACKAGES += \
