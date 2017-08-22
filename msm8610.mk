@@ -191,6 +191,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     gps.msm8610
 
+# GNSS HAL
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-imp
+
 # Filesystem
 PRODUCT_PACKAGES += \
     setup_fs
