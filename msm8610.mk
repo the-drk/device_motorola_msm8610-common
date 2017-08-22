@@ -115,8 +115,7 @@ PRODUCT_PACKAGES += \
     gralloc.msm8610 \
     copybit.msm8610 \
     hwcomposer.msm8610 \
-    memtrack.msm8610 \
-    power.msm8610
+    memtrack.msm8610
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -166,6 +165,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librs_jni \
     com.android.future.usb.accessory
+
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-impl \
+    power.msm8610
 
 # Ebtables
 PRODUCT_PACKAGES += \
