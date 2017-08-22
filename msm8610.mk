@@ -131,7 +131,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
 
 # Keystore
-PRODUCT_PACKAGES += keystore.msm8610
+PRODUCT_PACKAGES +=  \
+    android.hardware.keymaster@3.0-impl \
+    keystore.msm8610
 
 # Media Config
 PRODUCT_COPY_FILES += \
