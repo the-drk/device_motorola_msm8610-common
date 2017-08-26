@@ -54,8 +54,8 @@ on init
     chown root qcom_diag /sys/kernel/dropbox/event
     chown root qcom_diag /sys/kernel/dropbox/data
 
-    # Symbols required for motorola blobs
-    export LD_SHIM_LIBS "/system/lib/liblog.so|libmoto.so /system/vendor/lib/libqc-opt.so|libshim_qcopt.so /system/bin/thermal-engine:libshims_thermal.so"
+    # Symbols required
+    export LD_SHIM_LIBS "/system/lib/liblog.so|libmoto.so /system/vendor/lib/libqc-opt.so|libshim_qcopt.so /system/bin/thermal-engine:libshims_thermal.so:/system/bin/mpdecision|libshims_atomic.so"
 
 on fs
     wait /dev/block/platform/${ro.boot.bootdevice}

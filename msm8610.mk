@@ -168,6 +168,10 @@ PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service \
     com.android.future.usb.accessory
 
+# Perf
+PRODUCT_PACKAGES += \
+    libshims_atomic
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-impl \
