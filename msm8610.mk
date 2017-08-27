@@ -230,7 +230,6 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    hostapd_default.conf \
     hostapd.accept \
     hostapd.deny \
     hostapd \
