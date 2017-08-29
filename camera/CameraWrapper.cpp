@@ -26,6 +26,7 @@
 #include <cutils/log.h>
 #include <cutils/properties.h>
 
+#include <android-base/properties.h>
 #include <utils/threads.h>
 #include <utils/String8.h>
 #include <hardware/hardware.h>
@@ -56,6 +57,8 @@ static int camera_device_open(const hw_module_t *module, const char *name,
 static int camera_get_number_of_cameras(void);
 static int camera_get_camera_info(int camera_id, struct camera_info *info);
 
+using android::base::GetProperty;
+
 static struct hw_module_methods_t camera_module_methods = {
     .open = camera_device_open
 };
@@ -84,15 +87,14 @@ camera_module_t HAL_MODULE_INFO_SYM = {
 
 static int get_product_device()
 {
-    char value[PROPERTY_VALUE_MAX];
-
     if (product_device != UNKNOWN)
         return product_device;
 
-    property_get("ro.product.device", value, "");
-    if (!strncmp(value, "condor", 6))
+    std::string device = GetProperty("ro.product.device", "");
+
+    if (device == "condor")
         product_device = CONDOR;
-    else if (!strncmp(value, "otus", 4))
+    else if (device == "otus")
         product_device = OTUS;
     else
         product_device = UNKNOWN;
