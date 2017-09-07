@@ -124,6 +124,7 @@ PRODUCT_PACKAGES += \
     camera.device@3.2-impl \
     camera.msm8610 \
     libshim_qcopt \
+    libshims_sensorlistener \
     Snap
 
 # IPC router config
