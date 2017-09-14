@@ -105,7 +105,8 @@ MALLOC_SVELTE := true
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
-TARGET_RIL_VARIANT := caf
+
+#TARGET_RIL_VARIANT := caf
 
 # Recovery
 TARGET_RECOVERY_DENSITY := hdpi
