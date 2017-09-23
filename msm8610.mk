@@ -197,6 +197,7 @@ PRODUCT_PACKAGES += \
 # GNSS HAL
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-imp
+    
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8610
@@ -212,6 +213,10 @@ PRODUCT_PACKAGES += \
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
+    
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl
 
 # Misc
 PRODUCT_PACKAGES += \
