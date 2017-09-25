@@ -26,6 +26,15 @@ persist.audio.calfile3=/etc/acdbdata/Handset_cal.acdb
 persist.audio.calfile4=/etc/acdbdata/Hdmi_cal.acdb
 persist.audio.calfile5=/etc/acdbdata/Headset_cal.acdb
 persist.audio.calfile6=/etc/acdbdata/Speaker_cal.acdb
+# Camera
+persist.camera.HAL3.enabled=1
+camera.disable_zsl_mode=1
+persist.camera.cpp.duplication=false
+vidc.debug.perf.mode=2
+vidc.enc.dcvs.extra-buff-count=2
+persist.camera.zsl.mode=0
+persist.camera.hal.debug.mask=0
+camera2.portability.force_api=1
 
 # Bluetooth
 qcom.bluetooth.soc=smd
