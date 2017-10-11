@@ -91,11 +91,12 @@ TARGET_QCOM_NO_FM_FIRMWARE := true
 # GPS
 TARGET_NO_RPC := true
 
-# Hardware tunables framework
-BOARD_HARDWARE_CLASS := $(COMMON_PATH)/cmhw/
-
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
+
+# Lineage hardware
+BOARD_HARDWARE_CLASS += \
+    $(VENDOR_PATH)/lineagehw
 
 # Memory
 MALLOC_SVELTE := true
