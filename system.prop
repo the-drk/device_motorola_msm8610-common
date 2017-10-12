@@ -62,7 +62,10 @@ ro.media.enc.aud.fileformat=amr
 ro.media.enc.aud.codec=amrnb
 media.stagefright.legacyencoder=true
 media.stagefright.less-secure=true
+
+# treble
 persist.media.treble_omx=false
+camera.disable_treble=true
 
 # Qualcomm
 ro.qualcomm.cabl=0
