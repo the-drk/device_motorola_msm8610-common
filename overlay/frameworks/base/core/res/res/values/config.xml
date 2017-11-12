@@ -27,11 +27,6 @@
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
     <bool name="config_automatic_brightness_available">true</bool>
 
-    <string-array name="config_locationProviderPackageNames">
-        <item>com.google.android.gms</item>
-        <item>com.android.location.fused</item>
-    </string-array>
-
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
 
