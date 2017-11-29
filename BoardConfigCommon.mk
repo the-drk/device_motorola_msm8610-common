@@ -94,6 +94,10 @@ TARGET_QCOM_NO_FM_FIRMWARE := true
 # GPS
 TARGET_NO_RPC := true
 
+# Filesystem
+TARGET_ALLOW_LEGACY_AIDS := true
+TARGET_FS_CONFIG_GEN := $(VENDOR_PATH)/config.fs
+
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
