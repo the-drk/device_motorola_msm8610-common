@@ -97,10 +97,10 @@ on post-fs-data
     chown system system /sys/devices/platform/msm_sdcc.4/polling
 
     # Setup correct permissions for dbvc and atvc
-    mkdir /pds/public/atvc 0770 oem_9012 shell
+    mkdir /pds/public/atvc 0770 oem_5012 shell
     chmod 0770 /pds/public/atvc
-    mkdir /data/local/dbvc 0750 oem_9004 shell
-    mkdir /data/local/atvc 0775 oem_9004 shell
+    mkdir /data/local/dbvc 0750 oem_5004 shell
+    mkdir /data/local/atvc 0775 oem_5004 shell
 
     # Wifi
     restorecon /data/hostapd
@@ -147,22 +147,22 @@ on post-fs-data
     write /proc/apanic_console 1
 
     # Create directory used by power_supply_logger
-    mkdir /data/power_supply_logger 0750 oem_9001 log
+    mkdir /data/power_supply_logger 0750 oem_5001 log
 
     # create the necessary data dirs for tpapi with proper permission
-    mkdir /dev/tpapi 02770 oem_9007 oem_9007
-    mkdir /data/tpapi 02770 oem_9007 oem_9007
-    mkdir /data/tpapi/etc 02770 oem_9007 oem_9007
-    mkdir /data/tpapi/etc/tpa 02770 oem_9007 oem_9007
-    mkdir /data/tpapi/etc/tpa/persistent 02770 oem_9007 oem_9007
+    mkdir /dev/tpapi 02770 oem_5007 oem_5007
+    mkdir /data/tpapi 02770 oem_5007 oem_5007
+    mkdir /data/tpapi/etc 02770 oem_5007 oem_5007
+    mkdir /data/tpapi/etc/tpa 02770 oem_5007 oem_5007
+    mkdir /data/tpapi/etc/tpa/persistent 02770 oem_5007 oem_5007
 
     # Permissions for battery health daemon
-    chown oem_9001 oem_9001 /sys/module/qpnp_bms/parameters/last_ocv_uv
-    chown oem_9001 oem_9001 /sys/module/qpnp_charger/parameters/bms_chrg_capacity
-    chown oem_9001 oem_9001 /sys/module/qpnp_charger/parameters/bms_chrg_capacity_temp
-    chown oem_9001 oem_9001 /sys/module/qpnp_charger/parameters/chrg_timestamp
-    chown root oem_9001 /sys/class/power_supply/battery/capacity
-    chown root oem_9001 /sys/class/power_supply/battery/status
+    chown oem_5001 oem_5001 /sys/module/qpnp_bms/parameters/last_ocv_uv
+    chown oem_5001 oem_5001 /sys/module/qpnp_charger/parameters/bms_chrg_capacity
+    chown oem_5001 oem_5001 /sys/module/qpnp_charger/parameters/bms_chrg_capacity_temp
+    chown oem_5001 oem_5001 /sys/module/qpnp_charger/parameters/chrg_timestamp
+    chown root oem_5001 /sys/class/power_supply/battery/capacity
+    chown root oem_5001 /sys/class/power_supply/battery/status
 
     start batt_health
 
@@ -333,13 +333,13 @@ on boot
     chmod 0664 /sys/class/leds/lcd-backlight/brightness
 
     # Permissions for Factory Test of Charging Paths
-    chown oem_9001 oem_9001 /sys/class/power_supply/battery/device/force_chg_auto_enable
-    chown oem_9001 oem_9001 /sys/class/power_supply/battery/device/force_chg_ibatt
-    chown oem_9001 oem_9001 /sys/class/power_supply/battery/device/force_chg_itrick
-    chown oem_9001 oem_9001 /sys/class/power_supply/battery/device/force_chg_iusb
-    chown oem_9001 oem_9001 /sys/class/power_supply/battery/device/force_chg_usb_suspend
-    chown oem_9001 oem_9001 /sys/class/power_supply/battery/device/force_chg_fail_clear
-    chown oem_9001 oem_9001 /sys/class/power_supply/battery/device/force_chg_usb_otg_ctl
+    chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_auto_enable
+    chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_ibatt
+    chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_itrick
+    chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_iusb
+    chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_usb_suspend
+    chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_fail_clear
+    chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_usb_otg_ctl
 
     # Change ownership and permission for vibrator
     chown system system /sys/class/timed_output/vibrator/enable
@@ -427,8 +427,8 @@ service audiod /system/bin/audiod
 
 service batt_health /system/bin/batt_health
     class main
-    user oem_9001
-    group oem_9001
+    user oem_5001
+    group oem_5001
     disabled
 
 service charge_only_mode /system/bin/charge_only_mode
