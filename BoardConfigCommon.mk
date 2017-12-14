@@ -25,6 +25,9 @@ COMMON_PATH := device/motorola/msm8610-common
 
 BOARD_VENDOR := motorola-qcom
 
+# ADB Legacy Interface
+TARGET_USES_LEGACY_ADB_INTERFACE := true
+
 # Binder API version
 TARGET_USES_64_BIT_BINDER := true
 
