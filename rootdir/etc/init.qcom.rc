@@ -56,7 +56,7 @@ on init
     chown root oem_2950 /sys/kernel/dropbox/data
 
     # Symbols required
-    export LD_SHIM_LIBS "/system/lib/liblog.so|libmoto.so /system/vendor/lib/libqc-opt.so|libshim_qcopt.so /system/bin/thermal-engine:libshims_thermal.so:/system/bin/mpdecision|libshims_atomic.so:/system/lib/libmot_sensorlistener.so|libshims_sensorlistener.so"
+    export LD_SHIM_LIBS "/system/lib/liblog.so|libmoto.so /system/vendor/lib/libqc-opt.so|libshim_qcopt.so /system/bin/thermal-engine:libshims_thermal.so:/system/bin/mpdecision|libshims_atomic.so:/system/lib/libmot_sensorlistener.so|libshims_sensorlistener.so:/system/vendor/lib/libqc-opt.so|libshims_sensorlistener.so"
 
 on fs
     wait /dev/block/platform/${ro.boot.bootdevice}

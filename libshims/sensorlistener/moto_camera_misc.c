@@ -18,3 +18,6 @@
 
 //libmot_sensorlistener.so
 void _ZNK7android16SensorEventQueue5getFdEv() {}
+
+//libqc-opt.so
+void _ZN8SkCanvas14drawRectCoordsEffffRK7SkPaint() {}
