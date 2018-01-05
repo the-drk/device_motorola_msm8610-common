@@ -63,7 +63,6 @@ on fs
     symlink /dev/block/platform/${ro.boot.bootdevice} /dev/block/bootdevice
 
     mount_all fstab.qcom
-    swapon_all fstab.qcom
 
     # Set permissions for BL logs
     chmod 0640 /dev/block/bootdevice/by-name/logs
@@ -606,6 +605,6 @@ on property:sys.boot_completed=1
     chmod 0664 /sys/devices/system/cpu/cpu3/online
 
     write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
-    write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 49152
+    write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 53059
 
     start mpdecision
