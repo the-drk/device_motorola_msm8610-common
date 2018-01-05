@@ -65,7 +65,6 @@ media.stagefright.legacyencoder=true
 media.stagefright.less-secure=true
 
 # treble
-persist.media.treble_omx=false
 camera.disable_treble=true
 
 # Qualcomm
