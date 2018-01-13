@@ -82,6 +82,9 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml
 
+PRODUCT_ENFORCE_RRO_TARGETS := \
+    framework-res
+
 # WiFi configuration
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
@@ -258,6 +261,11 @@ PRODUCT_PACKAGES += \
 # WiFi HAL
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service
+
+# HIDL
+PRODUCT_PACKAGES += \
+	android.hidl.base@1.0 \
+	android.hidl.manager@1.0-java
 
 # Wifi
 PRODUCT_PACKAGES += \
