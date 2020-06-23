@@ -149,6 +149,12 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl-legacy \
     camera.device@3.2-impl \
     camera.msm8610 \
+	mm-qcamera-app \
+	libmmcamera_interface \
+	libmmjpeg_interface \
+	libqomx_camera \
+	libshim_atomic \
+	libshim_camera \
     libshim_qcopt \
     libshims_sensorlistener \
     Snap

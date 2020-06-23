@@ -15,6 +15,9 @@
 
 LOCAL_PATH := $(call my-dir)
 
+CAMERA_CLIENT_LOCAL_PATH:= $(call my-dir)
+include $(call all-subdir-makefiles)
+
 # motorola logging
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := moto_log.c
@@ -29,8 +32,6 @@ LOCAL_SHARED_LIBRARIES := libicuuc libicui18n
 LOCAL_MODULE := libshim_qcopt
 LOCAL_MODULE_TAGS := optional
 
-CAMERA_CLIENT_LOCAL_PATH:= $(call my-dir)
-include $(call all-subdir-makefiles)
 include $(CLEAR_VARS)
 
 LOCAL_PATH := $(CAMERA_CLIENT_LOCAL_PATH)
