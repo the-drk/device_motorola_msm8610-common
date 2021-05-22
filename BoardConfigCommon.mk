@@ -161,3 +161,6 @@ ifeq ($(HOST_OS),linux)
     endif
   endif
 endif
+
+# Extras
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
