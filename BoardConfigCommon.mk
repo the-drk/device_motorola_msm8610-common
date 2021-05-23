@@ -125,7 +125,6 @@ BOARD_USES_QCOM_HARDWARE := true
 TARGET_RECOVERY_DENSITY := hdpi
 BOARD_HAS_NO_SELECT_BUTTON := true
 HAVE_SELINUX := true
-LZMA_RAMDISK_TARGETS := recovery
 
 # SELinux
 #include device/qcom/sepolicy/sepolicy.mk
