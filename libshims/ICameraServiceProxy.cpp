@@ -47,7 +47,7 @@ public:
 };
 
 
-IMPLEMENT_META_INTERFACE(CameraServiceProxy, "android.hardware.ICameraServiceProxy");
+DO_NOT_DIRECTLY_USE_ME_IMPLEMENT_META_INTERFACE(CameraServiceProxy, "android.hardware.ICameraServiceProxy");
 
 status_t BnCameraServiceProxy::onTransact(uint32_t code, const Parcel& data, Parcel* reply,
         uint32_t flags) {
