@@ -15,6 +15,7 @@ LOCAL_SHARED_LIBRARIES := \
     libcutils \
     libdl \
     liblog \
+    libprocessgroup \
     libloc_core \
     libgps.utils
 
@@ -73,6 +74,7 @@ LOCAL_SHARED_LIBRARIES := \
     liblog \
     libloc_eng \
     libloc_core \
+    libprocessgroup \
     libgps.utils \
     libdl
 

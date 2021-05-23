@@ -14,6 +14,7 @@ LOCAL_SHARED_LIBRARIES := \
     libutils \
     libcutils \
     libgps.utils \
+    libprocessgroup \
     libdl \
     libandroid_runtime
 
