@@ -19,43 +19,41 @@ set -e
 
 INITIAL_COPYRIGHT_YEAR=2014
 
-# Load extractutils and do some sanity checks
+# Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
-if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
+if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-CM_ROOT="$MY_DIR"/../../..
+ANDROID_ROOT="${MY_DIR}/../../.."
 
-HELPER="$CM_ROOT"/vendor/lineage/build/tools/extract_utils.sh
-if [ ! -f "$HELPER" ]; then
-    echo "Unable to find helper script at $HELPER"
+HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
+if [ ! -f "${HELPER}" ]; then
+    echo "Unable to find helper script at ${HELPER}"
     exit 1
 fi
-. "$HELPER"
+source "${HELPER}"
 
-# Initialize the helper for common
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$CM_ROOT" "true" "$1"
+# Initialize the helper
+setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true
 
-# Copyright headers and guards
+# Warning headers and guards
 write_headers "condor otus"
 
 # The standard common blobs
-write_makefiles "$MY_DIR"/proprietary-files.txt
+write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
-# We are done!
+# Finish
 write_footers
 
-if [ -s "$MY_DIR"/../$DEVICE/proprietary-files.txt ]; then
-    INITIAL_COPYRIGHT_YEAR="$DEVICE_BRINGUP_YEAR"
-
+if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
     # Reinitialize the helper for device
-    setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT" "false" "$1"
+    setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}"
 
-    # Copyright headers and guards
+    # Warning headers and guards
     write_headers
 
     # The standard device blobs
-    write_makefiles "$MY_DIR"/../$DEVICE/proprietary-files.txt
+    write_makefiles "${MY_DIR}/../${DEVICE}/proprietary-files.txt" true
 
-    # We are done!
+    # Finish
     write_footers
 fi

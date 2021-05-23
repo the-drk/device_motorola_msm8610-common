@@ -9,7 +9,6 @@ bin/netmgrd
 bin/qmi_motext_hook
 bin/qmuxd
 bin/rfs_access
-bin/rild
 bin/rmt_storage
 bin/time_daemon
 lib/libactions_irservice_stm.so
@@ -28,7 +27,6 @@ lib/libOmxVdecHevc.so
 lib/libpkip.so
 lib/libqmimotext.so
 lib/libqomx_core.so
-lib/libril.so
 lib/libtpa_core.so
 lib/libtpa.so
 vendor/lib/libadsprpc.so
@@ -134,10 +132,6 @@ vendor/lib/librpmb.so
 vendor/lib/libssd.so
 
 # Taken from bullhead
-vendor/lib/libwvdrm_L1.so
-vendor/lib/libwvm.so
-vendor/lib/libWVStreamControlAPI_L1.so
-vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
 # Taken from shamu
