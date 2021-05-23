@@ -401,7 +401,7 @@ private:
 
 };
 
-IMPLEMENT_META_INTERFACE(CameraDeviceUser,
+DO_NOT_DIRECTLY_USE_ME_IMPLEMENT_META_INTERFACE(CameraDeviceUser,
                          "android.hardware.camera2.ICameraDeviceUser");
 
 // ----------------------------------------------------------------------
